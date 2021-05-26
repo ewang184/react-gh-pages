@@ -1,0 +1,114 @@
+
+.topnav {
+    z-index: 10;
+    background-color:coral;
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+  }
+  div.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+ 
+  }
+  div.topnav a:hover {
+    background-color: white;
+    color: coral;
+  }
+  .topnav a.active {
+    color: black;
+    
+  }
+
+div.pagebubble{
+  font-size: x-large;
+  margin-bottom: 20vh;
+  margin-left: 48%;
+  padding-top: 10vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  transform: translate(0,13vh);
+  overflow: auto;
+  text-align: left;
+  color: black;
+  background-color: white;
+  width: 40%;
+  height: 70vh;
+  border-radius: 25px;
+}
+
+img.pictureOne{
+  position: fixed;
+  bottom: 15vh;
+  left: 17vh;
+  width: 30%;
+}
+img.pictureTwo{
+  position: fixed;
+  bottom: 15vh;
+  left: 17vh;
+  width: 30%;
+}
+img.project{
+  position: fixed;
+  bottom: 25vh;
+  left: 17vh;
+  width: 30%;
+}
+img.projecttwo{
+  position: fixed;
+
+  bottom: 25vh;
+  left: 17vh;
+  width: 25%;
+  height: 50%;
+}
+
+div.titleHead{
+  font-size: 100px;
+  font-weight: bold;
+  margin-left: 23%;
+  padding-left: 10vh;
+  transform: translate(0,13vh);
+  overflow: auto;
+  text-align: left;
+  color: black;
+  background-color: white;
+  width: 60%;
+}
+
+div.normalHead{
+  transform: translate(0,13vh);
+  margin-left: 12%;
+  font-size: x-large;
+  overflow: auto;
+  text-align: left;
+  color: black;
+  background-color: white;
+  width: 60%;
+}
+
+div.subHead{
+  margin-left: 23%;
+  padding-left: 10vh;
+  transform: translate(0, 0vh);
+  overflow: auto;
+  text-align: left;
+  color: black;
+  background-color: white;
+  width: 60%;
+}
+
+div.contests{
+  font-weight: normal;
+  overflow: auto;
+  text-align: left;
+  color: black;
+  width: 150%;
+  height: 5vh;
+  text-align: left;
+}
