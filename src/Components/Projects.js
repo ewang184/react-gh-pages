@@ -1,34 +1,20 @@
 import React, {useRef, useState} from 'react';
 import quickS from "../images/quickS.jpg"
 import mathsoc from "../images/mathsoc.jpg"
+import { Link, useHistory } from "react-router-dom"
 export default function Projects(){
-    const checkpoint = 300;
-    var opacity = 0;
-    var opatwo = 0;
-            window.addEventListener("scroll", () => {
-                const currentScroll = window.pageYOffset;
-                if (currentScroll <= checkpoint) {
-                    opacity = 1 - currentScroll / checkpoint;
-
-                    opatwo = 0;
-                } else {
-                    opatwo = currentScroll/window.screen.height;
-                    opacity = 0;
-                }
-                document.querySelector(".project").style.opacity = opacity;
-                document.querySelector(".projecttwo").style.opacity = opatwo;
-                });
+  
     return (
         <>
         <div class="topnav">
-            <a href="/react-gh-pages">Home</a>
-            <a href="About">About</a>
-            <a href="Awards">Awards</a>
-            <a href="Education">Education</a>
-            <a class="active" href="Projects">Projects</a> 
-            <a href = "https://github.com/ewang184">GitHub</a>
-            <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/">LinkedIn</a>
-            <a>Contact me! Email: ervin.wang.881@gmail.com</a>
+            <a><Link to = "/" >Home</Link></a>
+            <a><Link to = "/About" >About</Link></a>
+            <a ><Link to = "/Awards" >Awards</Link></a>
+            <a><Link to = "/Education" >Education</Link></a>
+            <a class="active"><Link to = "/Projects" >Projects</Link></a>
+            <a href = "https://github.com/ewang184" style={{padding:"1%" }}>GitHub</a>
+                <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/" style={{padding:"1%" }}>LinkedIn</a>
+                <a style={{padding:"1%" }}>Contact me! Email: ervin.wang.881@gmail.com</a>
         </div>
             <div class="pagebubble">
                 <p>QuickStat</p><p> 2021-Present</p>
@@ -50,8 +36,19 @@ export default function Projects(){
 
                 </p>
             </div>
-            <img src = {mathsoc} className="projecttwo" alt ="mathsoc"></img>
-            <img src = {quickS} className="project" alt ="quickS"></img>
+            
+            <img src = {mathsoc} className="projecttwo" alt ="mathsoc" style={{opacity: function() {
+                var scrollTop = (this).scrollTop();
+                var elementHeight = (this).height();
+                console.log(1 - (elementHeight - scrollTop) / elementHeight)
+                return 1 - (elementHeight - scrollTop) / elementHeight;
+            }}}></img>
+
+            <img src = {quickS} className="project" alt ="quickS" style={{opacity: function() {
+                var scrollTop = (this).scrollTop();
+                var elementHeight = (this).height();
+                return 1 - (elementHeight - scrollTop) / elementHeight;
+            }}}></img>
         </>
     )
 }

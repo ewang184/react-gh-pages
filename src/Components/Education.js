@@ -5,33 +5,18 @@ import { Link, useHistory } from "react-router-dom"
 import mmhs from "../images/schoollogo.jpg"
 import wloo from "../images/waterloo.jpg"
 export default function Education(){
-    const checkpoint = 300;
-    var opacity = 0;
-    var opatwo = 0;
-            window.addEventListener("scroll", () => {
-                const currentScroll = window.pageYOffset;
-                if (currentScroll <= checkpoint) {
-                    opacity = 1 - currentScroll / checkpoint;
-
-                    opatwo = 0;
-                } else {
-                    opatwo = currentScroll/window.screen.height;
-                    opacity = 0;
-                }
-                document.querySelector(".pictureOne").style.opacity = opacity;
-                document.querySelector(".pictureTwo").style.opacity = opatwo;
-                });
+    
     return (
         <>
             <div class="topnav">
-                <a href="/react-gh-pages">Home</a>
-                <a href="About">About</a>
-                <a href="Awards">Awards</a>
-                <a class="active" href="Education">Education</a>
-                <a href="Projects">Projects</a>
-                <a href = "https://github.com/ewang184">GitHub</a>
-                <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/">LinkedIn</a>
-                <a>Contact me! Email: ervin.wang.881@gmail.com</a>
+                <a><Link to = "/" >Home</Link></a>
+                <a><Link to = "/About" >About</Link></a>
+                <a ><Link to = "/Awards" >Awards</Link></a>
+                <a class="active"><Link to = "/Education" >Education</Link></a>
+                <a><Link to = "/Projects" >Projects</Link></a>
+                <a href = "https://github.com/ewang184" style={{padding:"1%" }}>GitHub</a>
+                <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/" style={{padding:"1%" }}>LinkedIn</a>
+                <a style={{padding:"1%" }}>Contact me! Email: ervin.wang.881@gmail.com</a>
             </div>
             
             <div class="pagebubble">

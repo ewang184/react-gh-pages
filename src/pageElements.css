@@ -10,9 +10,9 @@
     float: left;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 1vh 2vh;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 2.5vh;
  
   }
   div.topnav a:hover {
@@ -23,6 +23,7 @@
     color: black;
     
   }
+
 
 div.pagebubble{
   font-size: x-large;
@@ -42,26 +43,32 @@ div.pagebubble{
 }
 
 img.pictureOne{
-  position: fixed;
+  transform: translate(-40vh,-175vh);
   bottom: 15vh;
   left: 17vh;
   width: 30%;
 }
-img.pictureTwo{
+img.personal{
   position: fixed;
+  bottom: 15vh;
+  left: 17vh;
+  width: 30%;
+  transform: translate(0,-7vh);
+}
+img.pictureTwo{
+  transform: translate(20vh,-90vh);
   bottom: 15vh;
   left: 17vh;
   width: 30%;
 }
 img.project{
-  position: fixed;
+  transform: translate(-30vh,-180vh);
   bottom: 25vh;
   left: 17vh;
   width: 30%;
 }
 img.projecttwo{
-  position: fixed;
-
+  transform: translate(20vh,-75vh);
   bottom: 25vh;
   left: 17vh;
   width: 25%;
@@ -69,7 +76,7 @@ img.projecttwo{
 }
 
 div.titleHead{
-  font-size: 100px;
+  font-size: 700%;
   font-weight: bold;
   margin-left: 23%;
   padding-left: 10vh;

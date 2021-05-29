@@ -1,18 +1,18 @@
 import React, {useRef, useState} from 'react';
-
+import { Link, useHistory } from "react-router-dom"
 export default function Awards(){
     return (
         <>
             
             <div class="topnav">
-                <a href="/react-gh-pages">Home</a>
-                <a href="About">About</a>
-                <a class="active" href="Awards">Awards</a>
-                <a href="Education">Education</a>
-                <a href="Projects">Projects</a>
-                <a href = "https://github.com/ewang184">GitHub</a>
-                <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/">LinkedIn</a>
-                <a>Contact me! Email: ervin.wang.881@gmail.com</a>
+                <a><Link to = "/" >Home</Link></a>
+                <a><Link to = "/About" >About</Link></a>
+                <a class="active"><Link to = "/Awards" >Awards</Link></a>
+                <a><Link to = "/Education" >Education</Link></a>
+                <a><Link to = "/Projects" >Projects</Link></a>
+                <a href = "https://github.com/ewang184" style={{padding:"1%" }}>GitHub</a>
+                <a href = "https://www.linkedin.com/in/ervin-wang-8290aa20b/" style={{padding:"1%" }}>LinkedIn</a>
+                <a style={{padding:"1%" }}>Contact me! Email: ervin.wang.881@gmail.com</a>
             </div>
             <div class = "normalHead" style={{fontSize: "xx-large"}}> Contests 2018</div>
             <div class = "normalHead">
